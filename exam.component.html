@@ -1,0 +1,65 @@
+<html>
+<head>
+<style>
+.button {
+background-color: coral;
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 18px;
+margin: 4px 2px;
+cursor: pointer;
+}
+.button2 {background-color: #008CBA;}
+.button3 {background-color: LightPink;}
+.button4 {background-color: LightGray; color: black;}
+.button5 {background-color: LightSlateGrey;}
+.button6 {background-color: rgb(27, 122, 218);}
+.button1 {border-radius: 14px;}
+.button2 {border-radius: 14px;}
+.button3 {border-radius: 14px;}
+.button4 {border-radius: 14px;}
+.button5 {border-radius: 14px;}
+.button6 {border-radius: 14px;}
+</style>
+</head>
+<body>
+    
+    <button> <h1 style="color: green; font-size:16px">Select Exam</h1></button><br>
+    <button class="button">JAVA</button>
+    <button class="button button2">PYTHON</button>
+    <button class="button button3">C++</button>
+    <button class="button button4">C#</button>
+    <button class="button button5">PHP</button>
+    <button class="button button6">SQL</button>
+    <div align="right"> 
+        <input type="button" value="Logout"/> 
+        </div> 
+    <button (click)="getAllExams()">Get Exams</button>
+    <table border="15">
+        <tr>
+            <td >{{tempExam.examId}}</td>
+            <td >{{tempExam.examName}}</td>
+            <td >{{tempExam.examDate}}</td>
+            <td >{{tempExam.startTime}}</td>
+            <td >{{tempExam.endTime}}</td>
+        </tr>
+    </table>
+    Enter ExamId: <input type=number [(ngModel)]="examId">
+    <button (click)="getExamById(examId)">Get Exam By Id</button>
+    <table border="15">
+        <tr>
+            <td >{{tempExamId.examId}}</td>
+            <td >{{tempExamId.examName}}</td>
+            <td >{{tempExamId.examDate}}</td>
+            <td >{{tempExamId.startTime}}</td>
+            <td >{{tempExamId.endTime}}</td>
+        </tr>
+    </table>
+
+
+</body>
+</html>
